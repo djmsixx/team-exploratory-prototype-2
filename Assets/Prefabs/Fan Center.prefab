@@ -9,10 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 401691902018945561}
+  - component: {fileID: 7307262360039969424}
   - component: {fileID: 82454447109405322}
+  - component: {fileID: 1092739039720002816}
   - component: {fileID: 7192367049770385552}
   - component: {fileID: 3581609029176040953}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fan Blade (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,6 +36,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4384109841161472796}
   m_LocalEulerAnglesHint: {x: -88.061, y: -44.069, z: 297.067}
+--- !u!114 &7307262360039969424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077176465254548762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524a3680146426e4d885541d589572bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatingFan
+  rotationSpeed: 90
 --- !u!33 &82454447109405322
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42,6 +57,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077176465254548762}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1092739039720002816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077176465254548762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fed3e5d0ba0f784b9871a446ffe07be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KillObject
 --- !u!23 &7192367049770385552
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 856b5269e69ffc047b98ffb5e7f081c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,11 +148,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2039814923920776057}
+  - component: {fileID: 7577987257429139580}
   - component: {fileID: 487395549324603127}
   - component: {fileID: 2142060792271895916}
   - component: {fileID: 1760037023969690485}
   - component: {fileID: 7588233919431741907}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fan Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,6 +175,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4384109841161472796}
   m_LocalEulerAnglesHint: {x: 1.393, y: -18.417, z: 162.982}
+--- !u!114 &7577987257429139580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104593077979602883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524a3680146426e4d885541d589572bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatingFan
+  rotationSpeed: 90
 --- !u!33 &487395549324603127
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -192,7 +233,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 856b5269e69ffc047b98ffb5e7f081c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -246,11 +287,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5933804575140082601}
+  - component: {fileID: 78120471864330681}
   - component: {fileID: 7924615726411741076}
   - component: {fileID: 5810754621509276044}
   - component: {fileID: 503867473767030224}
   - component: {fileID: 8410841194438638058}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fan Blade (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,6 +314,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4384109841161472796}
   m_LocalEulerAnglesHint: {x: -88.061, y: -44.069, z: 297.067}
+--- !u!114 &78120471864330681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928141417287673409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524a3680146426e4d885541d589572bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatingFan
+  rotationSpeed: 90
 --- !u!33 &7924615726411741076
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -317,7 +372,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 856b5269e69ffc047b98ffb5e7f081c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -371,11 +426,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380228782726137725}
+  - component: {fileID: 3809421733809587829}
   - component: {fileID: 7231099478891605459}
   - component: {fileID: 5883519006641607355}
   - component: {fileID: 8141096184970700321}
   - component: {fileID: 2997689326607226125}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fan Blade (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,6 +453,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4384109841161472796}
   m_LocalEulerAnglesHint: {x: 1.393, y: -18.417, z: 162.982}
+--- !u!114 &3809421733809587829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313354687682891598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524a3680146426e4d885541d589572bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatingFan
+  rotationSpeed: 90
 --- !u!33 &7231099478891605459
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -442,7 +511,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 856b5269e69ffc047b98ffb5e7f081c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -496,12 +565,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4384109841161472796}
+  - component: {fileID: 7736077256889699785}
   - component: {fileID: 5831325036813945571}
   - component: {fileID: 3032666337250340354}
   - component: {fileID: 8249324264788460552}
   - component: {fileID: 6645092593475391098}
   - component: {fileID: 295348292627498874}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fan Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,8 +587,8 @@ Transform:
   m_GameObject: {fileID: 7553187030588505187}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6579908, y: -0.15042213, z: 0.29581764, w: 0.67595357}
-  m_LocalPosition: {x: -34.35, y: 43.79, z: 48.78}
-  m_LocalScale: {x: 0.63938, y: 0.033082798, z: 0.63938}
+  m_LocalPosition: {x: -37.092, y: 43.279, z: 54.940002}
+  m_LocalScale: {x: 1.1509637, y: 0.05955316, z: 1.1509637}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2039814923920776057}
@@ -527,6 +597,19 @@ Transform:
   - {fileID: 401691902018945561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 78.108, y: 64.461, z: 101.454}
+--- !u!114 &7736077256889699785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7553187030588505187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524a3680146426e4d885541d589572bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatingFan
+  rotationSpeed: 90
 --- !u!33 &5831325036813945571
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -572,7 +655,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 856b5269e69ffc047b98ffb5e7f081c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
