@@ -7,6 +7,13 @@ public class KillObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            PlayerPhase phase = other.GetComponent<PlayerPhase>();
+
+            if (phase != null && phase.IsPhasing)
+            {
+                return;
+            }
+
             GameManager.Instance.PlayerDied(other.gameObject);
         }
     }

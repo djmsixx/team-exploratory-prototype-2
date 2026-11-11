@@ -67,12 +67,19 @@ public class GameManager : MonoBehaviour
         }
 
         player.transform.position = respawnPosition;
+
+        PlayerPhase phase = player.GetComponent<PlayerPhase>();
+
+        if (phase != null)
+        {
+            phase.ResetPhase();
+        }
+
         player.SetActive(true);
 
         deathPanel.SetActive(false);
         isDead = false;
 
-        // Lock mouse again
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

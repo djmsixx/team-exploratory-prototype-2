@@ -85,4 +85,16 @@ public class PlayerPhase : MonoBehaviour
     {
             Physics.IgnoreLayerCollision(gameObject.layer, phaseableLayer, false);
     }
+
+    public void ResetPhase()
+    {
+        wantsPhase = false;
+        InsideWall = false;
+        SpeedMultiplier = 1f;
+
+        if (IsPhasing)
+        {
+            SetPhasing(false);
+        }
+    }
 }
