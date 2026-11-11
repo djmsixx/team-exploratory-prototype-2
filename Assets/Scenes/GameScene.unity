@@ -3180,13 +3180,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Say hi to my
+  m_text: 'I heard that you can
 
-    brother in the
+    press the SHIFT button
 
-    opposite room
+    to go faster. It can help
 
-    for me'
+    you reach farther places
+
+    like that ledge.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3318,7 +3320,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123956212}
   m_LocalRotation: {x: -0, y: -0.014705008, z: -0, w: 0.99989194}
-  m_LocalPosition: {x: 0, y: 0, z: -12.82}
+  m_LocalPosition: {x: 0, y: 0, z: -12.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3326,7 +3328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -1.685, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42.87, y: 43.43}
+  m_AnchoredPosition: {x: 38.75, y: 48.43}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &124014496
@@ -34290,9 +34292,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You can walk on
+  m_text: 'You might phase through
 
-    if you are solid'
+    certain platforms when
+
+    using your power. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34319,8 +34323,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -34424,7 +34428,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913174929}
   m_LocalRotation: {x: -0, y: 0.95595866, z: -0, w: 0.29350156}
-  m_LocalPosition: {x: 0, y: 0, z: -43.32}
+  m_LocalPosition: {x: 0, y: 0, z: -44.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34432,7 +34436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 145.865, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41.28, y: 49.49}
+  m_AnchoredPosition: {x: 39.76, y: 49.36}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1932596355
@@ -36339,11 +36343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5959872793695883015, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.65
+      value: 21.79
       objectReference: {fileID: 0}
     - target: {fileID: 5959872793695883015, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.32
+      value: 6.35
       objectReference: {fileID: 0}
     - target: {fileID: 5959872793695883015, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_LocalPosition.z
