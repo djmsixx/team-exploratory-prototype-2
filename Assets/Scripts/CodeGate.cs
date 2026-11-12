@@ -7,8 +7,18 @@ public class CodeGate : MonoBehaviour
     private string entered = "";
     private string message = "";
     private bool keypadOpen;
-    private bool unlocked;
+    private bool messagePopupOpen;
+    private bool correctCodeEntered;
     private playerMovement movement;
+    private GUIStyle keypadTitleStyle;
+    private GUIStyle keypadEntryStyle;
+    private GUIStyle keypadMessageStyle;
+    private GUIStyle keypadButtonStyle;
+    private GUIStyle popupTitleStyle;
+    private GUIStyle popupMessageStyle;
+    private GUIStyle popupButtonStyle;
+
+    private const string CorrectCodeMessage = "I have the right code, how come it doesn't work? fuck it lets just phase through";
 
     void Start()
     {
@@ -18,7 +28,7 @@ public class CodeGate : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (unlocked || keypadOpen) return;
+        if (keypadOpen || messagePopupOpen || correctCodeEntered) return;
 
         PlayerPhase phase = collision.collider.GetComponentInParent<PlayerPhase>();
         if (phase == null || phase.IsPhasing) return;
@@ -58,9 +68,10 @@ public class CodeGate : MonoBehaviour
         {
             if (entered == correctCode)
             {
-                unlocked = true;
-                GetComponent<Collider>().enabled = false;
-                CloseKeypad();
+                correctCodeEntered = true;
+                keypadOpen = false;
+                entered = "";
+                messagePopupOpen = true;
             }
             else
             {
@@ -76,23 +87,103 @@ public class CodeGate : MonoBehaviour
 
     void OnGUI()
     {
-        if (!keypadOpen) return;
+        EnsureGuiStyles();
 
-        float w = 220f, h = 330f;
-        Rect box = new Rect((Screen.width - w) / 2f, (Screen.height - h) / 2f, w, h);
-        GUI.Box(box, "Enter Code");
-
-        GUI.Label(new Rect(box.x + 10, box.y + 25, w - 20, 22), new string('*', entered.Length));
-        GUI.Label(new Rect(box.x + 10, box.y + 45, w - 20, 22), message);
-
-        string[] keys = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "C", "0", "OK" };
-        for (int i = 0; i < keys.Length; i++)
+        if (messagePopupOpen)
         {
-            Rect r = new Rect(box.x + 10 + (i % 3) * 70, box.y + 70 + (i / 3) * 50, 65, 45);
-            if (GUI.Button(r, keys[i])) Press(keys[i]);
+            DrawCorrectCodePopup();
+            return;
         }
 
-        if (GUI.Button(new Rect(box.x + 10, box.y + h - 45, w - 20, 35), "Cancel"))
+        if (!keypadOpen) return;
+
+        float w = Mathf.Min(Screen.width * 0.82f, 450f);
+        float h = Mathf.Min(Screen.height * 0.9f, 560f);
+        Rect box = new Rect((Screen.width - w) / 2f, (Screen.height - h) / 2f, w, h);
+        GUI.Box(box, GUIContent.none);
+
+        GUI.Label(new Rect(box.x + 16f, box.y + 14f, w - 32f, 42f), "Enter Code", keypadTitleStyle);
+        GUI.Label(new Rect(box.x + 16f, box.y + 59f, w - 32f, 44f), new string('*', entered.Length), keypadEntryStyle);
+        GUI.Label(new Rect(box.x + 16f, box.y + 103f, w - 32f, 28f), message, keypadMessageStyle);
+
+        string[] keys = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "C", "0", "OK" };
+        float margin = 20f;
+        float gap = 10f;
+        float buttonWidth = (w - margin * 2f - gap * 2f) / 3f;
+        float rowGap = 10f;
+        float gridY = box.y + 137f;
+        float buttonHeight = Mathf.Max(36f, Mathf.Min(70f, (h - 137f - 76f - rowGap * 3f) / 4f));
+        for (int i = 0; i < keys.Length; i++)
+        {
+            Rect r = new Rect(
+                box.x + margin + (i % 3) * (buttonWidth + gap),
+                gridY + (i / 3) * (buttonHeight + rowGap),
+                buttonWidth,
+                buttonHeight);
+            if (GUI.Button(r, keys[i], keypadButtonStyle)) Press(keys[i]);
+        }
+
+        if (GUI.Button(new Rect(box.x + margin, box.y + h - 64f, w - margin * 2f, 46f), "Cancel", keypadButtonStyle))
             CloseKeypad();
+    }
+
+    void DrawCorrectCodePopup()
+    {
+        float w = Mathf.Min(Screen.width * 0.88f, 820f);
+        float h = Mathf.Min(Screen.height * 0.62f, 340f);
+        Rect box = new Rect((Screen.width - w) / 2f, (Screen.height - h) / 2f, w, h);
+        GUI.Box(box, GUIContent.none);
+        GUI.Label(new Rect(box.x + 24f, box.y + 14f, w - 48f, 48f), "Keypad", popupTitleStyle);
+        GUI.Label(new Rect(box.x + 32f, box.y + 66f, w - 64f, h - 142f), CorrectCodeMessage, popupMessageStyle);
+
+        if (GUI.Button(new Rect(box.center.x - 140f, box.y + h - 66f, 280f, 50f), "Continue", popupButtonStyle))
+        {
+            messagePopupOpen = false;
+            if (movement != null) movement.enabled = true;
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
+    void EnsureGuiStyles()
+    {
+        if (keypadTitleStyle != null) return;
+
+        keypadTitleStyle = new GUIStyle(GUI.skin.label)
+        {
+            alignment = TextAnchor.MiddleCenter,
+            fontSize = 30,
+            fontStyle = FontStyle.Bold
+        };
+        keypadEntryStyle = new GUIStyle(GUI.skin.label)
+        {
+            alignment = TextAnchor.MiddleCenter,
+            fontSize = 28
+        };
+        keypadMessageStyle = new GUIStyle(GUI.skin.label)
+        {
+            alignment = TextAnchor.MiddleCenter,
+            fontSize = 20
+        };
+        keypadButtonStyle = new GUIStyle(GUI.skin.button)
+        {
+            fontSize = 24,
+            fontStyle = FontStyle.Bold
+        };
+        popupTitleStyle = new GUIStyle(keypadTitleStyle)
+        {
+            fontSize = 34
+        };
+        popupMessageStyle = new GUIStyle(GUI.skin.label)
+        {
+            alignment = TextAnchor.MiddleCenter,
+            fontSize = 26,
+            wordWrap = true
+        };
+        popupButtonStyle = new GUIStyle(keypadButtonStyle)
+        {
+            fontSize = 22
+        };
     }
 }
