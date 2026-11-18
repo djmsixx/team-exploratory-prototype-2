@@ -12,6 +12,7 @@ public class playerMovement : MonoBehaviour
     private Vector3 movement;
     private bool jumpRequested;
     private PlayerPhase phase;
+    public AudioSource jumpAudio;
 
     void Start()
     {
@@ -100,6 +101,11 @@ public class playerMovement : MonoBehaviour
                 Vector3.up * player_jump_force,
                 ForceMode.Impulse
             );
+
+            if (jumpAudio != null)
+            {
+                jumpAudio.Play();
+            }
 
             jumpRequested = false;
         }
