@@ -4339,16 +4339,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123956212}
-  m_LocalRotation: {x: -0, y: -0.014705008, z: -0, w: 0.99989194}
-  m_LocalPosition: {x: 0, y: 0, z: -12.94}
+  m_LocalRotation: {x: -0, y: 0.34606004, z: -0, w: 0.9382124}
+  m_LocalPosition: {x: 0, y: 0, z: -14.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -1.685, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 40.493, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.75, y: 48.43}
+  m_AnchoredPosition: {x: 40.04, y: 48.43}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &124014496
@@ -8394,7 +8394,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fan Center (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7307262360039969424, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
+    - {fileID: 7577987257429139580, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
+    - {fileID: 78120471864330681, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
+    - {fileID: 3809421733809587829, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13491,8 +13495,8 @@ Transform:
   m_GameObject: {fileID: 573979330}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.43, y: 5.41, z: -13.97}
-  m_LocalScale: {x: 3.7819564, y: 1, z: 4.137348}
+  m_LocalPosition: {x: 11.53, y: 5.41, z: -13.97}
+  m_LocalScale: {x: 5.8832116, y: 1, z: 4.137348}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 933560857}
@@ -26689,7 +26693,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425416480}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 093b7bfda74d025468d6ece8153cd486, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -39402,6 +39406,10 @@ PrefabInstance:
     - target: {fileID: 7553187030588505187, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
       propertyPath: m_Name
       value: Fan Center
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736077256889699785, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
+      propertyPath: rotationSpeed
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
