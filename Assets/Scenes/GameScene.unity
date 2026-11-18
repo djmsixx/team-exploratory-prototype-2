@@ -21588,6 +21588,132 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2262096312700533225}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
+--- !u!1 &1148987191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1148987196}
+  - component: {fileID: 1148987195}
+  - component: {fileID: 1148987194}
+  - component: {fileID: 1148987193}
+  - component: {fileID: 1148987192}
+  m_Layer: 0
+  m_Name: DialogueTriggerZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1148987192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148987191}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1148987193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148987191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05cc195cf20c7554aaa37e6d221072af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue: I need to find a way out of this room! Ugh that door requires a PIN number. I wonder if someone here knows the code...
+--- !u!23 &1148987194
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148987191}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 975d19fe84e5747488a8b152d44781f7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1148987195
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148987191}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1148987196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148987191}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.968832, y: 7.247405, z: 18.551939}
+  m_LocalScale: {x: 1.1070477, y: 11.969683, z: 19.679918}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2262096312700533225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1170812330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3550010361915896968, guid: c4a9879e1357b0c4fb5dca85e45f42f8, type: 3}
@@ -23278,6 +23404,7 @@ Transform:
   - {fileID: 1631426886}
   - {fileID: 1346675269}
   - {fileID: 1427984363}
+  - {fileID: 1632216407}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1274445037 stripped
@@ -25716,7 +25843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   dialoguePanel: {fileID: 1810282803}
   dialogueText: {fileID: 947967170}
-  displayDuration: 4
+  displayDuration: 6
 --- !u!43 &1474725411
 Mesh:
   m_ObjectHideFlags: 0
@@ -28218,7 +28345,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632216403}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -28277,11 +28404,11 @@ Transform:
   m_GameObject: {fileID: 1632216403}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.34822294, z: -0, w: 0.9374118}
-  m_LocalPosition: {x: 7.39, y: 44.92, z: 14.86}
-  m_LocalScale: {x: 22.35747, y: 5.781737, z: 0.48585245}
+  m_LocalPosition: {x: -1.3529601, y: 2.6951866, z: -9.5852}
+  m_LocalScale: {x: 22.357471, y: 5.781737, z: 0.48585248}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1266124803}
   m_LocalEulerAnglesHint: {x: 0, y: -40.757, z: 0}
 --- !u!114 &1632216408
 MonoBehaviour:
@@ -30470,7 +30597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.654902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -31633,7 +31760,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832314017}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -37035,7 +37162,7 @@ PrefabInstance:
       objectReference: {fileID: 1474725411}
     - target: {fileID: 992613485250816129, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_VersionIndex
-      value: 7026
+      value: 7038
       objectReference: {fileID: 0}
     - target: {fileID: 2450335237007171216, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_Mesh
@@ -37059,7 +37186,7 @@ PrefabInstance:
       objectReference: {fileID: 1524963603}
     - target: {fileID: 3478688367833698414, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_VersionIndex
-      value: 4458
+      value: 4470
       objectReference: {fileID: 0}
     - target: {fileID: 4386554792879944936, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37083,7 +37210,7 @@ PrefabInstance:
       objectReference: {fileID: 52215915}
     - target: {fileID: 5729458599905398839, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_VersionIndex
-      value: 7026
+      value: 7038
       objectReference: {fileID: 0}
     - target: {fileID: 5959872793695883015, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37163,7 +37290,7 @@ PrefabInstance:
       objectReference: {fileID: 1258950360}
     - target: {fileID: 9028098462877167164, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_VersionIndex
-      value: 7026
+      value: 7038
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37231,6 +37358,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7702093574261958698, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 888250116}
+    - targetCorrespondingSourceObject: {fileID: 7702093574261958698, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1148987196}
     - targetCorrespondingSourceObject: {fileID: 6652875277810160862, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       insertIndex: 1
       addedObject: {fileID: 157951904}
@@ -37341,4 +37471,3 @@ SceneRoots:
   - {fileID: 1298810268}
   - {fileID: 1464991538}
   - {fileID: 1990168065}
-  - {fileID: 1632216407}
