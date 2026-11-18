@@ -38,25 +38,31 @@ public class PlayerPhase : MonoBehaviour
         if (playerRenderer != null) normalColor = playerRenderer.material.color;
     }
 
+    
     void Update()
     {
-        if (Input.GetMouseButtonDown(phaseMouseButton))
-            wantsPhase = !wantsPhase;
-
         InsideWall = IsOverlappingPhaseable();
+
+        // Only allow toggling when outside a phaseable object.
+        if (Input.GetMouseButtonDown(phaseMouseButton) && !InsideWall)
+        {
+            wantsPhase = !wantsPhase;
+        }
 
         if (wantsPhase && !IsPhasing)
         {
             SetPhasing(true);
         }
-        else if (!wantsPhase && IsPhasing && !InsideWall)
+        else if (!wantsPhase && IsPhasing)
         {
             SetPhasing(false);
         }
 
         float target = (IsPhasing && InsideWall) ? slowMultiplier : 1f;
-        SpeedMultiplier = Mathf.Lerp(SpeedMultiplier, target, 1f - Mathf.Exp(-slowSmoothing * Time.deltaTime));
+
+        SpeedMultiplier = Mathf.Lerp(SpeedMultiplier,target,1f - Mathf.Exp(-slowSmoothing * Time.deltaTime));
     }
+
 
     void SetPhasing(bool on)
     {
