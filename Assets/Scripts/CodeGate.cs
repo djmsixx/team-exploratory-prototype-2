@@ -43,7 +43,17 @@ public class CodeGate : MonoBehaviour
         message = "";
 
         movement = phase.GetComponent<playerMovement>();
-        if (movement != null) movement.enabled = false;
+
+        Rigidbody rb = phase.GetComponent<Rigidbody>();
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
+        if (movement != null)
+            movement.enabled = false;
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
