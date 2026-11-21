@@ -691,6 +691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: banner sign biohazard
       objectReference: {fileID: 0}
+    - target: {fileID: 1373812253380670088, guid: da1ab7c6a17b69c47bb73b641ffea4ca, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6158029897995163999, guid: da1ab7c6a17b69c47bb73b641ffea4ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7671366

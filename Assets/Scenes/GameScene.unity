@@ -2574,6 +2574,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2146346840}
+    - target: {fileID: 8713110093564504713, guid: b9153e9b6a0342a4696f6633f06dc161, type: 3}
+      propertyPath: m_VersionIndex
+      value: 1523
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7618,8 +7622,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 0.1
+  far clip plane: 500
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -11881,6 +11885,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1321816655}
+    - target: {fileID: 8713110093564504713, guid: b9153e9b6a0342a4696f6633f06dc161, type: 3}
+      propertyPath: m_VersionIndex
+      value: 1523
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33652,10 +33660,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 640876530}
+    - target: {fileID: 4044074852541243456, guid: b9153e9b6a0342a4696f6633f06dc161, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8713110093564504713, guid: b9153e9b6a0342a4696f6633f06dc161, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 640876530}
+    - target: {fileID: 8713110093564504713, guid: b9153e9b6a0342a4696f6633f06dc161, type: 3}
+      propertyPath: m_VersionIndex
+      value: 1523
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35294,7 +35310,7 @@ PrefabInstance:
     - target: {fileID: 1024543193501170722, guid: b9153e9b6a0342a4696f6633f06dc161, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1006768691}
+      objectReference: {fileID: 647723930}
     - target: {fileID: 1084625070248277693, guid: b9153e9b6a0342a4696f6633f06dc161, type: 3}
       propertyPath: m_Name
       value: Radioactive Waste Drum (3)
@@ -35349,7 +35365,7 @@ PrefabInstance:
       objectReference: {fileID: 647723930}
     - target: {fileID: 8713110093564504713, guid: b9153e9b6a0342a4696f6633f06dc161, type: 3}
       propertyPath: m_VersionIndex
-      value: 1523
+      value: 1526
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37460,7 +37476,7 @@ PrefabInstance:
       objectReference: {fileID: 1006768691}
     - target: {fileID: 8713110093564504713, guid: b9153e9b6a0342a4696f6633f06dc161, type: 3}
       propertyPath: m_VersionIndex
-      value: 1523
+      value: 1526
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
