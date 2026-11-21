@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private bool isDead = false;
     // Allows scripts to check if the player is dead without allowing them to set it.
     public bool IsDead => isDead;
+    [Header("Audio")]
+    public AudioSource deathSound;
 
     private void Awake()
     {
@@ -39,12 +41,17 @@ public class GameManager : MonoBehaviour
             return;
 
         isDead = true;
+
+        if (deathSound != null)
+        {
+            deathSound.Play();
+        }
+
         player = deadPlayer;
 
         player.SetActive(false);
         deathPanel.SetActive(true);
 
-        // Unlock mouse for UI interaction
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
