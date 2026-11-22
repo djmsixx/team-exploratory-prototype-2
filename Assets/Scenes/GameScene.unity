@@ -25519,6 +25519,8 @@ MonoBehaviour:
   player_rotation_speed: 360
   player_jump_force: 6
   player_sprint_speed: 10
+  acceleration: 60
+  deceleration: 80
   jumpAudio: {fileID: 1425416488}
 --- !u!136 &1425416482
 CapsuleCollider:
@@ -37795,11 +37797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2179416336357999190, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20.395205
+      value: 20.62567
       objectReference: {fileID: 0}
     - target: {fileID: 2179416336357999190, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.01
+      value: -5.8944
       objectReference: {fileID: 0}
     - target: {fileID: 2450335237007171216, guid: 0228d20222866974fbc54f972fd7f75a, type: 3}
       propertyPath: m_Mesh
