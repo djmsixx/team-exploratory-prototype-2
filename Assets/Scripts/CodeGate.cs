@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CodeGate : MonoBehaviour
@@ -10,6 +12,8 @@ public class CodeGate : MonoBehaviour
     private bool messagePopupOpen;
     private bool correctCodeEntered;
     private playerMovement movement;
+    private readonly List<Transform> doorPanels = new List<Transform>();
+    private int phaseableLayer;
     private GUIStyle keypadTitleStyle;
     private GUIStyle keypadEntryStyle;
     private GUIStyle keypadMessageStyle;
@@ -24,6 +28,26 @@ public class CodeGate : MonoBehaviour
     {
         MeshRenderer r = GetComponent<MeshRenderer>();
         if (r != null) r.enabled = false;
+
+        phaseableLayer = LayerMask.NameToLayer("Phaseable");
+        if (phaseableLayer < 0)
+        {
+            Debug.LogError("Cannot unlock Door3: the Phaseable layer does not exist.");
+            return;
+        }
+
+        Transform[] roomObjects = transform.root.GetComponentsInChildren<Transform>(true);
+        foreach (Transform roomObject in roomObjects)
+        {
+            if (roomObject.name == "Door3" || roomObject.name.StartsWith("Door3 (", StringComparison.Ordinal))
+            {
+                doorPanels.Add(roomObject);
+                roomObject.gameObject.layer = 0;
+            }
+        }
+
+        if (doorPanels.Count == 0)
+            Debug.LogError("Cannot unlock Door3: no Door3 panels were found in the keypad's room.");
     }
 
     void OnCollisionEnter(Collision collision)
@@ -149,6 +173,9 @@ public class CodeGate : MonoBehaviour
         if (GUI.Button(new Rect(box.center.x - 140f, box.y + h - 66f, 280f, 50f), "Continue", popupButtonStyle))
         {
             messagePopupOpen = false;
+            foreach (Transform doorPanel in doorPanels)
+                doorPanel.gameObject.layer = phaseableLayer;
+
             if (movement != null) movement.enabled = true;
 
             Cursor.lockState = CursorLockMode.Locked;
