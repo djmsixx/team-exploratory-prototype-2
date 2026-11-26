@@ -5641,6 +5641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fan Center (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7736077256889699785, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
+      propertyPath: rotationSpeed
+      value: 600
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7307262360039969424, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
     - {fileID: 7577987257429139580, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
@@ -14509,7 +14513,7 @@ Transform:
   m_GameObject: {fileID: 1006509979}
   serializedVersion: 2
   m_LocalRotation: {x: 0.30513558, y: 0.30513558, z: 0.6378811, w: 0.6378811}
-  m_LocalPosition: {x: -9.48, y: -11.94, z: 9.75}
+  m_LocalPosition: {x: -9.57, y: -11.94, z: 9.86}
   m_LocalScale: {x: 2.9937704, y: 2.8874006, z: 0.70844656}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33155,7 +33159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7736077256889699785, guid: d5d148543c64b5c44af99fe912df2215, type: 3}
       propertyPath: rotationSpeed
-      value: 200
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
