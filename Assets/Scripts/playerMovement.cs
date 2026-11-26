@@ -3,18 +3,23 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+    [Header("Speed Settings")]
     public float player_move_speed = 5.0f;
     public float player_rotation_speed = 360.0f;
-    public float player_jump_force = 5.0f;
     public float player_sprint_speed = 8.0f;
-    public float acceleration = 60.0f;
+      public float acceleration = 60.0f;
     public float deceleration = 80.0f;
+    [Header("Jump Settings")]
+    public float player_jump_force = 5.0f;
+    public float fall_gravity_multiplier = 1.5f;
+    public float rise_gravity_multiplier = 1.3f;
+    [Header("Audio Settings")]
+    public AudioSource jumpAudio;
 
     private Rigidbody rb;
     private Vector3 movement;
     private bool jumpRequested;
     private PlayerPhase phase;
-    public AudioSource jumpAudio;
 
     void Start()
     {
@@ -117,6 +122,22 @@ public class playerMovement : MonoBehaviour
             }
 
             jumpRequested = false;
+        }
+        // Make the player fall faster.
+        if (rb.linearVelocity.y < 0)
+        {
+            rb.AddForce(
+                Physics.gravity * (fall_gravity_multiplier - 1f),
+                ForceMode.Acceleration
+            );
+        }
+        // Make the player rise slower.
+        else if (rb.linearVelocity.y > 0)
+        {
+            rb.AddForce(
+                Physics.gravity * (rise_gravity_multiplier - 1f),
+                ForceMode.Acceleration
+            );
         }
     }
 }
