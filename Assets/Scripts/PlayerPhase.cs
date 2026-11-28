@@ -84,7 +84,7 @@ public class PlayerPhase : MonoBehaviour
         int count = Physics.OverlapCapsuleNonAlloc(
             p1, p2, radius, hits, phaseableMask, QueryTriggerInteraction.Ignore);
 
-        Debug.Log("Phaseable objects detected: " + count);
+        // Debug.Log("Phaseable objects detected: " + count);
         return count > 0;
     }
 
